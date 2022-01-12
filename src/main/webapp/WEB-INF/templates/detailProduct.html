@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Information</title>
+</head>
+<body>
+<form action="/products" method="post">
+    <fieldset>
+        <legend>Customer Information</legend>
+        <input type="hidden" name="id" th:value="${product.id}">
+        <table>
+            <tr>
+                <td>Id</td>
+                <td th:text="${product.id}"></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>
+                    <input type="text" name="name" th:value="${product.name}">
+                </td>
+            </tr>
+            <tr>
+                <td>Img</td>
+                <td>
+                    <input type="text" name="img" th:value="${product.img}">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Update">
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
+<a href="/customers">Back to list</a>.
+</body>
+</html>
